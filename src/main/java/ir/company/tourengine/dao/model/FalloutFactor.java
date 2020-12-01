@@ -1,7 +1,6 @@
-package ir.company.tourengine.model;
+package ir.company.tourengine.dao.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;

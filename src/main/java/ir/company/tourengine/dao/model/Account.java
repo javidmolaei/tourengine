@@ -1,6 +1,4 @@
-package ir.company.tourengine.model;
-
-import org.hibernate.annotations.GenericGenerator;
+package ir.company.tourengine.dao.model;
 
 import javax.persistence.*;
 

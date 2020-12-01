@@ -1,8 +1,7 @@
-package ir.company.tourengine.model;
+package ir.company.tourengine.dao.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
@@ -22,6 +21,7 @@ public class User {
     private String roll;
     private String birthday;
     private String nationalCode;
+    private String vCode;
     private String password;
     private Integer age;
     @Column(name = "SUB_USER")
@@ -151,5 +151,13 @@ public class User {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public String getvCode() {
+        return vCode;
+    }
+
+    public void setvCode(String vCode) {
+        this.vCode = vCode;
     }
 }
