@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <!--    <link rel="stylesheet" href="../css/bootstrap.min.css">-->
+    <!-- FontAwesome -->
+    <link rel="stylesheet" th:href="@{/css/fontawesome.css}">
+    <link th:href="@{/css/fontiran.css}" rel="stylesheet"/>
+    <!-- Main Style -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+    <title>ثبت نام</title>
+</head>
+<body>
+
+<!--Loading Container Start-->
+<div id="load" class="loading-overlay display-flex flex-column justify-content-center align-items-center">
+    <div class="primary-color font-28 fas fa-spinner fa-spin"></div>
+</div>
+<!--Loading Container End-->
+
+<div class="row h-100">
+    <div class="col-xs-12 col-sm-12">
+
+        <!--Page Title & Icons Start-->
+        <div class="header-icons-container text-center">
+            <a th:href="@{/login/}">
+                <span class="float-left">
+                    <img th:src="@{/icons/back.svg}" alt="Back Icon">
+                </span>
+            </a>
+            <span>ثبت نام</span>
+        </div>
+        <!--Page Title & Icons End-->
+
+        <div class="rest-container">
+            <div class="text-center header-icon-logo-margin">
+                <img th:src="@{/images/logo-main.png}" alt="Main Logo">
+            </div>
+
+            <!--Sign Up Container Start-->
+            <div class="sign-up-form-container text-center">
+                <form class="width-100">
+
+                    <!--Sign Up Input Field Start-->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span>
+                                    <img th:src="@{/icons/avatar-light.svg}" alt="Avatar Icon">
+                                </span>
+                            </div>
+                            <input class="form-control" type="text" autocomplete="off" name="username" placeholder="نام کاربری">
+                        </div>
+                    </div>
+                    <!--Sign Up Input Field End-->
+
+                    <!--Sign Up Input Field Start-->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span><img th:src="@{/icons/envelope.svg}" alt="Envelope Icon"></span>
+                            </div>
+                            <input class="form-control" type="text" autocomplete="off" name="email" placeholder="ایمیل">
+                        </div>
+                    </div>
+                    <!--Sign Up Input Field End-->
+
+                    <!--Sign Up Input Field Start-->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                             <span><img th:src="@{/icons/lock.svg}" alt="Lock Icon"></span>
+                            </div>
+                            <input class="form-control" type="password" name="password" placeholder="رمز عبور">
+                            <div class="input-group-append password-visibility">
+                                <span>
+                                    <img th:src="@{/icons/eye.svg}" alt="Password Visibility Icon">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sign Up Input Field End-->
+
+                    <!--Sign Up Input Field Start-->
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span><img th:src="@{/icons/lock.svg}" alt="Lock Icon"></span>
+                            </div>
+                            <input class="form-control" type="password" name="password" placeholder="تکرار رمز عبور">
+                            <div class="input-group-append password-visibility">
+                                <span>
+                                    <img th:src="@{/icons/eye.svg}" alt="Password Visibility Icon">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sign Up Input Field End-->
+
+                    <div class="form-submit-button">
+                        <a href="#" class="btn btn-primary text-uppercase">ثبت نام با موبایل</a>
+                    </div>
+                </form>
+            </div>
+            <!--Sign Up Container Start-->
+
+        </div>
+    </div>
+
+    <!--Terms And Conditions Agreement Container Start-->
+    <div class="col-xs-12 col-sm-12 text-center sms-rate-text font-roboto flex-end margin-bottom-30">
+        <div class="container-sms-rate-text width-100 font-11">
+            <span class="light-gray font-weight-light">با عضویت در سامانه، قوانین و مقررات ما را می پذیرید </span>
+            <br/>
+            <a href="#" class="dark-link">
+                <span class="font-weight-light">شرایط و ضوابط استفاده از سامانه </span>
+            </a>
+        </div>
+    </div>
+    <!--Terms And Conditions Agreement Container End-->
+
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script th:src="@{/js/jquery-3.4.1.js}"></script>
+<script th:src="@{/js/popper.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/main2.js}"></script>
+</body>
+
+<!-- Mirrored from templates-preview.com/gitex/customer/sign-up-page-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Nov 2019 18:57:08 GMT -->
+</html>

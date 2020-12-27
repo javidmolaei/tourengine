@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="43" viewBox="0 0 33 43">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_11927" data-name="Path 11927" d="M0,2H33V-41H0Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_1840" data-name="Rectangle 1840" width="32" height="38" fill="none"/>
+    </clipPath>
+    <pattern id="pattern" width="1" height="1" patternTransform="matrix(1, 0, 0, -1, 0, 76)" viewBox="0 0 32 38">
+      <image preserveAspectRatio="none" width="32" height="38" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAwCAYAAABjezibAAAAAXNSR0IArs4c6QAAAx5JREFUWAntluty3SAMBtOml7z/2/ZerU/W80GwD0ns/qk1QyQkgRaBJ+fh4ZL3deDDxvItv+l/NM7WnwYFgMuRKYAJp8744XYPKNjHquSwmwD9jgHM6ZCPVAkRCj/wn2PgI66cDkehBMzuAfelxtdnjY0vAWu6dPBU0NEVAwE43ROQOdf7vYaQXjkHOw2yB6xaywcCBDEAn2oAC8S3GgL5HvH/U8Cq9wKSKwbMAwH3s8avGtinQVqwaqySxYDiegH06gH6UYPr7iHLdazkR8LOAAkCPGAOrjmvl+45gD5FekCKjCCBA9gPBCDg+g4e/hZ7QOAc2ckeEBDgHL7Fch0rPSC7C2gnBSUXGz8dZPSA+X4r/H4ZAeauQpKXgOSMAPEdKluAgCFoIemeAx/d8h2e9ha3AKv2CqftVaMVv+LUh34oe4BC2MXsJDaSb1FI3+EhoHuAQghI5xJyIXyGFA4N9CFwFNgDJK4I2Wvi2UXsQyHvAQKUIqDdJEa3hBTusC7eAxzBCakW0msW1mtW517T9iygnRQKbRexgchOaqNdW+brZRaQnXs4AFmvn5wEw04RVJ2xTXsW0E3RgAnHegZzxLzb7PZXH1qbSNq3zMHf0e/BQdqui0JCY2fnmPNfhrhv0w8I3eeXq5UZQDZB0BRC5xBOXeE1Tnf5ceu/wvyQyPMwanyNzACyIIHyWr1e4foD6CfPXz7sBShCF5Uh5GsALaamaILjVyxmnJg2OsUrx++6NT4LyAI2EC4LEmNj3xRzczlEX5S5Pu0hHBvdA2Shg/wUNgcqr8tCFiYfnwcDmDUMfR6MNa4v8yb3AF1kvoUF413h87r7PGICuZacPDQ28gIO5z1ActxYTccAQ/AJZ1F8imuEROvLvCEcm8wAksdmds0T4wO2f4/laiSBBGWdsCQnbLN4FtBNhBS4hxPe/Cw2AtWXeY09A5inAxBB93BLYOKPUHZQnXXWbfLEq3PDINd87ZxvLGvcCSGomsSMLwst0OyyMzFfTWraO0ubUIJoq5vEt2zOBm9d1xSPyRAu4pd5deDqwNWB/7YDfwHFtwDWDkT2QwAAAABJRU5ErkJggg=="/>
+    </pattern>
+    <clipPath id="clip-path-3">
+      <path id="Path_11930" data-name="Path 11930" d="M7-4c1.1,0,2-.448,2-1S8.1-6,7-6,5-5.552,5-5,5.9-4,7-4Z" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <path id="Path_11933" data-name="Path 11933" d="M6-28H8V-5H6Z" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-7">
+      <path id="Path_11936" data-name="Path 11936" d="M7-27a7,7,0,0,0,7-7,7,7,0,0,0-7-7,7,7,0,0,0-7,7A7,7,0,0,0,7-27Z" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-9">
+      <path id="Path_11939" data-name="Path 11939" d="M5.5-35A1.5,1.5,0,0,0,7-36.5,1.5,1.5,0,0,0,5.5-38,1.5,1.5,0,0,0,4-36.5,1.5,1.5,0,0,0,5.5-35Z" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+  </defs>
+  <g id="Group_7219" data-name="Group 7219" transform="translate(0 41)">
+    <g id="Group_7210" data-name="Group 7210" clip-path="url(#clip-path)">
+      <g id="Group_7209" data-name="Group 7209" transform="translate(0 -36)">
+        <g id="Group_7208" data-name="Group 7208" clip-path="url(#clip-path-2)">
+          <rect id="Rectangle_1839" data-name="Rectangle 1839" width="32" height="38" fill="url(#pattern)"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_7212" data-name="Group 7212" clip-path="url(#clip-path-3)">
+      <g id="Group_7211" data-name="Group 7211" clip-path="url(#clip-path)">
+        <path id="Path_11928" data-name="Path 11928" d="M0-11H14V1H0Z"/>
+      </g>
+    </g>
+    <g id="Group_7214" data-name="Group 7214" clip-path="url(#clip-path-5)">
+      <g id="Group_7213" data-name="Group 7213" clip-path="url(#clip-path)">
+        <path id="Path_11931" data-name="Path 11931" d="M1-33H13V0H1Z" fill="#aaabae"/>
+      </g>
+    </g>
+    <g id="Group_7216" data-name="Group 7216" clip-path="url(#clip-path-7)">
+      <g id="Group_7215" data-name="Group 7215" clip-path="url(#clip-path)">
+        <path id="Path_11934" data-name="Path 11934" d="M-5-46H19v24H-5Z" fill="#fd3724"/>
+      </g>
+    </g>
+    <g id="Group_7218" data-name="Group 7218" clip-path="url(#clip-path-9)">
+      <g id="Group_7217" data-name="Group 7217" clip-path="url(#clip-path)">
+        <path id="Path_11937" data-name="Path 11937" d="M-1-43H12v13H-1Z" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

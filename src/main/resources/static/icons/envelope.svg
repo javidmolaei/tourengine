@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.319" height="16.32" viewBox="0 0 16.319 16.32">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_3233" data-name="Path 3233" d="M0-7.681H16.319V-24H0Z" transform="translate(0 24)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Path_3236" data-name="Path 3236" d="M0-18.644A1.359,1.359,0,0,1,1.363-20H14.956a1.36,1.36,0,0,1,1.363,1.356v8.168A1.359,1.359,0,0,1,14.956-9.12H1.363A1.36,1.36,0,0,1,0-10.476Zm1.36,0v8.168s0,0,0,0H14.956s0,0,0,0v-8.168s0,0,0,0H1.363S1.36-18.64,1.36-18.644Zm.68,2.724v-1.36l6.12,2.04,6.12-2.04v1.36L8.16-13.88Z" transform="translate(0 20)" fill="#b7b7b7" stroke="#b7b7b7" stroke-width="1" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path id="Path_3235" data-name="Path 3235" d="M0-7.681H16.319V-24H0Z" transform="translate(0 24)" fill="#b7b7b7"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <path id="Path_3239" data-name="Path 3239" d="M0-24H16.319V-7.681H0Z" transform="translate(0 24)" fill="none" clip-rule="evenodd"/>
+    </clipPath>
+  </defs>
+  <g id="Group_5356" data-name="Group 5356" transform="translate(0 24)">
+    <g id="Group_5350" data-name="Group 5350" transform="translate(0 -24)" clip-path="url(#clip-path)">
+      <path id="Path_3232" data-name="Path 3232" d="M0-24H16.319V-7.681H0Z" transform="translate(0 24)" fill="rgba(255,0,0,0)"/>
+    </g>
+    <g id="Group_5352" data-name="Group 5352" transform="translate(0 -21.28)" clip-path="url(#clip-path-2)">
+      <g id="Group_5351" data-name="Group 5351" transform="translate(0 -2.72)" clip-path="url(#clip-path-3)">
+        <path id="Path_3234" data-name="Path 3234" d="M-5-25H18.119V-7.321H-5Z" transform="translate(1.6 24.32)" fill="#b7b7b7"/>
+      </g>
+    </g>
+    <g id="Group_5355" data-name="Group 5355" transform="translate(0 -24)" clip-path="url(#clip-path-4)">
+      <g id="Group_5354" data-name="Group 5354" clip-path="url(#clip-path)">
+        <g id="Group_5353" data-name="Group 5353">
+          <path id="Path_3237" data-name="Path 3237" d="M0,0H16.319V16.319H0Z" fill="none" stroke="#b7b7b7" stroke-width="0.02"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

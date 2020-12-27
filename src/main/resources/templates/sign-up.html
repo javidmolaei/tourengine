@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <!--    <link rel="stylesheet" href="../css/bootstrap.min.css">-->
+    <!-- FontAwesome -->
+    <link rel="stylesheet" th:href="@{/css/fontawesome.css}">
+    <link th:href="@{/css/fontiran.css}" rel="stylesheet"/>
+    <!-- Main Style -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+    <title>ثبت نام</title>
+</head>
+<body>
+
+<!--Loading Container Start-->
+<div id="load" class="loading-overlay display-flex flex-column justify-content-center align-items-center">
+    <div class="primary-color font-28 fas fa-spinner fa-spin"></div>
+</div>
+<!--Loading Container End-->
+
+    <div class="row h-100 align-items-center">
+        <div class="col-xs-12 col-sm-12 margin-bottom-up">
+            <div class="text-center mb-5">
+                <img th:src="@{/images/logo-main.png}" alt="Main Logo">
+
+            </div>
+
+            <!--Sign Up Buttons Container Start-->
+            <div class="sign-up-btn-container">
+                <a class="btn btn-center width-100 display-block btn-secondary text-uppercase btn-padding-1">ثبت نام با فیسبوک</a>
+                <a href="#" class="btn btn-center width-100 display-block btn-primary text-uppercase margin-top-10">ثبت نام با ایمیل</a>
+            </div>
+            <!--Sign Up Buttons Container End-->
+
+            <div class="have-an-account text-center">
+                <a th:href="@{/login}" class="regular-link">
+                    در حال حاضر یک حساب کاربری دارید
+                ؟</a>
+            </div>
+        </div>
+    </div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script th:src="@{/js/jquery-3.4.1.js}"></script>
+<script th:src="@{/js/popper.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/main2.js}"></script>
+</body>
+
+<!-- Mirrored from templates-preview.com/gitex/customer/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Nov 2019 18:57:07 GMT -->
+</html>

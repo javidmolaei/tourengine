@@ -1,0 +1,3364 @@
+/**==============================Table Of Contents Start===========================**/
+/**
+1) Fonts Import & Font Family
+2) Reused Color Definition
+3) General Reused Selectors
+4) Scan Card Container / All Credit Cards Container
+5) Upload Pictures Styles
+6) Car and Card Information Container Styles
+7) Payment Options Container
+8) Addresses Container
+9) Sign Up Container
+10) Settings Wrapper
+11) Support Container
+12) History Items Container
+13) Toggle Yes/No Check/Uncheck Settings
+14) Start Requesting Ride Container
+15) Tapped Car Container
+16) Request Ride Container
+17) Review Container
+18) Promo Container
+19) Chat Container
+20) Google Maps
+21) Buttons
+22) Display
+23) Colors
+24) Margin/Padding
+25) Container
+26) Links
+27) General
+28) Border
+29) Font Sizes
+30) Width/Height
+31) CSS Animations
+32) Responsive Styles
+**/
+/**==============================Table Of Contents End===========================**/
+/**==============================Fonts Start=====================================**/
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url(https://fonts.gstatic.com/s/robotocondensed/v18/ieVi2ZhZI2eCN5jzbjEETS9weq8-33mZGCQYag.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(https://fonts.gstatic.com/s/robotocondensed/v18/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7CA.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url(https://fonts.gstatic.com/s/robotocondensed/v18/ieVi2ZhZI2eCN5jzbjEETS9weq8-32meGCQYag.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc9.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url(http://templates-preview.com/gitex/fonts/BebasNeue-Light.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'SF Pro Regular';
+    src: url(http://templates-preview.com/gitex/fonts/SF-Pro-Display-Regular.otf);
+    font-weight: 300;
+}
+
+.font-roboto-condensed {
+    /*font-family: 'Roboto Condensed', 'sans-serif';*/
+    font-family: IRANSans, 'sans-serif';
+    font-weight: 500;
+    font-style: normal;
+}
+
+.font-roboto {
+    /*font-family: 'Roboto', 'sans-serif';*/
+    font-family: IRANSans, 'sans-serif';
+    font-weight: 500;
+    font-style: normal;
+}
+
+.font-helvetica {
+    /*font-family: 'Helvetica Neue';*/
+    font-family: IRANSans;
+}
+/**==============================Fonts End======================================**/
+/**============================Colors Start=====================================**/
+/**==============================Colors End======================================**/
+/**============================General Selectors (Applied to all)================**/
+.loading-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+    .loading-overlay .fa-spin {
+        font-size: 36px;
+    }
+
+::-webkit-scrollbar {
+    background: transparent;
+    height: 0;
+    width: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    /*font-family: 'Roboto Condensed', 'sans-serif';*/
+    font-family: IRANSans, 'sans-serif';
+    font-weight: 500;
+    font-style: normal;
+    direction: rtl;
+}
+
+select {
+    background: #FFF;
+    width: 100%;
+    border-radius: 4px;
+    padding: 16px;
+    font-size: 16px;
+    color: #3F3F3F;
+    /* Here's the code we need */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+    select.custom-select {
+        display: inline-block;
+        height: inherit;
+        width: 100%;
+        border-radius: 4px;
+        padding: 16px 20px 16px 0;
+        font-size: 16px;
+        color: #3F3F3F;
+        -webkit-appearance: none;
+        background: #fff url(http://templates-preview.com/gitex/icons/dropdown-angle.svg) no-repeat left 20px center;
+        border: 1px solid #B7B7B7;
+    }
+
+        select.custom-select:focus {
+            border-color: #b7b7b7;
+        }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    input:focus,
+    select:focus,
+    button:focus,
+    a:focus,
+    a:hover {
+        outline: none !important;
+        box-shadow: none !important;
+        text-decoration: none;
+    }
+
+input[type='radio'] {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid #707070;
+    vertical-align: middle;
+}
+
+    input[type='radio']:before {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin: 2px auto;
+        border-radius: 50%;
+    }
+
+    input[type="radio"]:checked:before {
+        background: #252941;
+    }
+
+    input[type="radio"].radio-grey:checked:before {
+        background: #707070;
+    }
+
+    input[type="radio"].radio-wide:before {
+        width: 7px;
+        height: 7px;
+        margin: 2px auto;
+    }
+
+.form-group {
+    padding: 10px 32px;
+    margin: 0;
+}
+
+    .form-group .input-group {
+        font-size: 16px;
+        font-weight: 300;
+        width: 100%;
+        height: 60px;
+        border: 1px solid #B7B7B7;
+        border-radius: 4px;
+    }
+
+        .form-group .input-group.light-field {
+            border: 1px solid #DEDEDE;
+        }
+
+        .form-group .input-group .input-group-prepend,
+        .form-group .input-group .input-group-append {
+            margin: 0 20px;
+        }
+
+            .form-group .input-group .input-group-prepend span,
+            .form-group .input-group .input-group-append span {
+                color: #777777;
+                line-height: 58px;
+            }
+
+            .form-group .input-group .input-group-prepend .icon-inherited-color,
+            .form-group .input-group .input-group-append .icon-inherited-color {
+                color: inherit;
+            }
+
+            .form-group .input-group .input-group-prepend .profile-calendar-icon,
+            .form-group .input-group .input-group-append .profile-calendar-icon {
+                height: 16px;
+            }
+
+        .form-group .input-group .input {
+            width: 100%;
+        }
+
+        .form-group .input-group input {
+            padding-left: 0px;
+            font-weight: 300;
+            border: none;
+            height: 100%;
+        }
+
+            .form-group .input-group input::placeholder {
+                /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: #B1B1B1;
+                opacity: 1;
+                /* Firefox */
+                font-weight: 300;
+            }
+
+            .form-group .input-group input:focus {
+                box-shadow: none;
+            }
+
+        .form-group .input-group.border-bottom {
+            border: none;
+            border-bottom: 1px solid #000000 !important;
+        }
+
+    .form-group .verify-sms {
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 15px;
+        margin-left: 15px;
+    }
+
+.nav-tabs {
+    border: 0;
+}
+
+    .nav-tabs .nav-item {
+        width: 50%;
+        float: left;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 0px !important;
+    }
+
+        .nav-tabs .nav-item .nav-link {
+            border: 0;
+            padding: 16px 0px;
+            height: auto;
+            margin: 0;
+            color: #95A0B6;
+            font-weight: 300;
+        }
+
+            .nav-tabs .nav-item .nav-link.active {
+                color: #0C82F9;
+                border-bottom: 3px solid #FCD300;
+            }
+
+.profile-name {
+    padding-top: 16px;
+}
+
+.rest-container {
+    position: relative;
+    top: 48px;
+}
+
+    .rest-container.chat-rest-container {
+        display: flex;
+        flex-flow: column;
+        top: 48px;
+        height: calc(100% - 48px);
+    }
+
+    .rest-container.new-request {
+        top: 150px;
+    }
+
+    .rest-container.trip-description {
+        top: 56px;
+    }
+
+    .rest-container.paypal {
+        top: 96px;
+    }
+
+.main-menu {
+    position: fixed;
+    top: 0;
+    background: #FFFFFF;
+    height: 100%;
+    right: 0;
+    left: 53px;
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 10000;
+}
+
+    .main-menu .mini-profile-info {
+        width: 100%;
+        padding-bottom: 16px;
+    }
+
+        .main-menu .mini-profile-info .profile-picture {
+            margin-top: 20px;
+        }
+
+        .main-menu .mini-profile-info .menu-close {
+            height: 48px;
+        }
+
+            .main-menu .mini-profile-info .menu-close span {
+                padding: 12px;
+            }
+
+            .main-menu .mini-profile-info .menu-close:hover {
+                cursor: pointer;
+            }
+
+        .main-menu .mini-profile-info .profile-email {
+            font-weight: 300;
+        }
+
+    .main-menu .menu-items {
+        width: 100%;
+        background-color: #E4E4E4;
+        padding-top: 24px;
+    }
+
+        .main-menu .menu-items .all-menu-items {
+            display: flex;
+            flex-flow: column;
+            height: 100%;
+            padding-bottom: 1rem;
+            margin-bottom: 0px;
+            text-align: right
+        }
+
+            .main-menu .menu-items .all-menu-items .menu-item {
+                text-decoration: none;
+                color: inherit;
+                padding: 16px 24px;
+                font-weight: 300;
+            }
+
+                .main-menu .menu-items .all-menu-items .menu-item:active,
+                .main-menu .menu-items .all-menu-items .menu-item:hover {
+                    background-color: #2F2F2F;
+                    color: #FFFFFF;
+                }
+
+                .main-menu .menu-items .all-menu-items .menu-item .notification-num {
+                    position: absolute;
+                    right: 35px;
+                    padding: 0px 6px;
+                    color: #FFFFFF;
+                    top: 6px;
+                    font-weight: bold;
+                    background-color: #F50052;
+                    border-radius: 50%;
+                    font-size: 13px;
+                }
+
+            .main-menu .menu-items .all-menu-items .menu-item-icon {
+                width: 20px;
+                text-align: center;
+                margin-right: 20px;
+            }
+
+            .main-menu .menu-items .all-menu-items .menu-item-click {
+                float: left;
+                color: #FFFFFF;
+                font-size: 7px;
+                margin-top: 8px;
+            }
+
+.menu-item .menu-item-icon.menu-dark {
+    display: inline;
+}
+
+.menu-item .menu-item-icon.menu-light {
+    display: none;
+}
+
+.menu-item .menu-item-icon.profile,
+.menu-item .menu-item-icon.logout,
+.menu-item .menu-item-icon.setting {
+    margin-left: 4px;
+}
+
+.menu-item .menu-item-title.profile {
+    margin-left: 4px;
+}
+
+.menu-item .menu-item-title.promo,
+.menu-item .menu-item-title.support,
+.menu-item .menu-item-title.logout {
+    margin-left: 2px;
+}
+
+.menu-item:hover .menu-dark {
+    display: none;
+}
+
+.menu-item:hover .menu-light {
+    display: inline;
+}
+
+.header-icons-container {
+    padding: 15px 32px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #FFFFFF;
+    height: 48px;
+    z-index: 1000;
+}
+
+    .header-icons-container span {
+        line-height: 20px;
+    }
+
+    .header-icons-container a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+.header-icons-container-with-other {
+    height: auto;
+}
+
+.header-icon-logo-margin {
+    margin-top: 32px;
+}
+
+    .header-icon-logo-margin .profile-picture-container {
+        position: relative;
+    }
+
+        .header-icon-logo-margin .profile-picture-container span {
+            position: absolute;
+            bottom: 0;
+            margin-left: 8px;
+            padding: 8px;
+            border-radius: 50%;
+            margin-right: -24px;
+            background-color: #9B9B9B;
+            color: #FFFFFF;
+            font-size: 13px;
+        }
+
+        .header-icon-logo-margin .profile-picture-container .paypal-icon {
+            height: 56px;
+        }
+
+.header-icon-logo-margin-extra {
+    margin-top: 80px;
+}
+
+.header-icon-logo-margin-bottom {
+    margin-bottom: 32px;
+}
+/**============================General Selectors End=============================**/
+/**============================Scan Card/All Credit Cards Start==================**/
+.scan-your-card-container,
+.scan-your-card-container-none {
+    padding: 16px 32px;
+    top: 72px;
+}
+
+    .scan-your-card-container .close-add-card a,
+    .scan-your-card-container-none .close-add-card a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+        .scan-your-card-container .close-add-card a img,
+        .scan-your-card-container-none .close-add-card a img {
+            height: 12px;
+        }
+
+        .scan-your-card-container .close-add-card a:focus,
+        .scan-your-card-container-none .close-add-card a:focus,
+        .scan-your-card-container .close-add-card a:hover,
+        .scan-your-card-container-none .close-add-card a:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+
+    .scan-your-card-container .btn-save,
+    .scan-your-card-container-none .btn-save {
+        width: 100%;
+        margin-bottom: 24px;
+        margin-top: 30px;
+    }
+
+        .scan-your-card-container .btn-save .save-icon,
+        .scan-your-card-container-none .btn-save .save-icon {
+            margin-left: 4px;
+        }
+
+        .scan-your-card-container .btn-save a,
+        .scan-your-card-container-none .btn-save a {
+            height: 60px;
+            color: black;
+            font-weight: 300;
+            width: 100%;
+        }
+
+    .scan-your-card-container .register,
+    .scan-your-card-container-none .register {
+        margin: 32px 0px;
+    }
+
+.scan-prompt {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    left: 0;
+}
+
+.scan-your-card-prompt {
+    margin-top: 16px;
+}
+
+    .scan-your-card-prompt .scan-your-card-icon {
+        height: 189px;
+        display: flex;
+        margin-bottom: 30px;
+        align-items: center;
+        flex-direction: column;
+        background-color: #2F2F2F;
+        border-radius: 4px;
+        justify-content: center;
+    }
+
+        .scan-your-card-prompt .scan-your-card-icon .photocamera-icon {
+            height: 35px;
+        }
+
+        .scan-your-card-prompt .scan-your-card-icon .mastercard-icon {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+        }
+
+    .scan-your-card-prompt .photography-icon {
+        color: #C7C7C7;
+    }
+
+        .scan-your-card-prompt .photography-icon img {
+            height: 27px;
+        }
+
+.ride-options-bottom,
+.wish-container,
+.payment-options-container,
+.scan-your-card-container {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.all-credit-cards {
+    margin: 0 32px;
+    margin-top: 24px;
+}
+
+    .all-credit-cards .credit-card-container {
+        padding-bottom: 16px;
+        border-bottom: 1px solid #F1F3F8;
+        margin-bottom: 16px;
+    }
+
+        .all-credit-cards .credit-card-container .set-primary-card {
+            margin-right: 8px;
+            color: #848484;
+        }
+
+    .all-credit-cards .btn-dark {
+        height: 60px;
+        line-height: 47px;
+        text-align: center;
+        width: 100%;
+    }
+/**============================Scan Card/All Credit Cards End====================**/
+/**================================Upload Picture Start==========================**/
+.upload-picture-container {
+    margin-bottom: 24px;
+}
+
+    .upload-picture-container .upload-camera-container {
+        padding: 72px 0px;
+        border-radius: 4px;
+        border: 1px solid #DEDEDE;
+    }
+
+        .upload-picture-container .upload-camera-container .camera {
+            border-radius: 50%;
+            padding: 16px;
+            border: 1px solid #BEBEBE;
+            font-size: 21px;
+            color: #C7C7C7;
+        }
+
+            .upload-picture-container .upload-camera-container .camera img {
+                height: 24px;
+                margin-top: -5px;
+            }
+
+.upload-picture-buttons-append {
+    padding: 0px 16px 8px 16px;
+}
+
+.upload-picture-buttons-prepend {
+    margin-bottom: 8px;
+    padding: 0px 16px;
+}
+/**================================Upload Picture End============================**/
+/**================================Car and Card Info Start=======================**/
+.card-info-container {
+    margin-bottom: 20px;
+}
+
+    .card-info-container .card-number {
+        margin-top: 20px;
+    }
+
+    .card-info-container .question-cvv {
+        margin-top: 7px;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .card-info-container .expiration-date-container {
+        width: 58%;
+        max-width: 160px;
+    }
+
+    .card-info-container .form-group {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+        .card-info-container .form-group .input-group {
+            padding: 24px 16px;
+        }
+
+    .card-info-container .card-info-cvv {
+        max-width: 80px;
+        padding: 16px;
+        border: 1px solid #B7B7B7;
+        border-radius: 4px;
+        background-color: #FFFFFF;
+    }
+
+.car-info-container {
+    margin-bottom: 8px;
+}
+
+    .car-info-container.car-info-container-top {
+        margin-top: 30px;
+    }
+
+    .car-info-container .form-group {
+        padding: 0;
+        margin-bottom: 24px;
+    }
+
+        .car-info-container .form-group .input-group {
+            padding-left: 16px;
+        }
+
+        .car-info-container .form-group .input-group-prepend {
+            margin: 0px 16px 0px 0px !important;
+        }
+
+    .car-info-container .car-info {
+        background-color: #FFFFFF;
+        height: 60px;
+        border-radius: 4px;
+        border: 1px solid #DEDEDE;
+    }
+
+    .car-info-container .form-group {
+        margin-bottom: 8px;
+    }
+
+    .car-info-container .multi-form-container .form-group {
+        width: 48%;
+    }
+
+    .car-info-container .car-registration-container h4 {
+        margin-top: 32px;
+    }
+
+    .car-info-container .register {
+        margin-top: 32px;
+    }
+
+    .car-info-container .form-control.text-input {
+        height: 60px;
+        padding-left: 16px;
+        border: 1px solid #DEDEDE;
+    }
+
+.car-info-wrap {
+    position: relative;
+}
+/**================================Car and Card Info End=========================**/
+/**================================Payment Options Start=========================**/
+.add-payment-method {
+    margin-top: 16px;
+}
+
+    .add-payment-method.bottom {
+        margin-bottom: 32px;
+    }
+
+.payment-options-list {
+    padding: 16px 24px;
+    margin: 16px 32px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+    .payment-options-list:active,
+    .payment-options-list:focus {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .payment-options-list.disabled {
+        border-radius: 4px;
+        border: 1px solid #B7B7B7;
+    }
+
+    .payment-options-list .icon {
+        margin-right: 16px;
+    }
+
+        .payment-options-list .icon.choose {
+            margin-right: 0px;
+        }
+
+        .payment-options-list .icon .hover-icon {
+            display: none;
+        }
+
+        .payment-options-list .icon.chosen {
+            margin-left: 4px;
+        }
+
+    .payment-options-list:hover {
+        color: #FFFFFF !important;
+        background-color: #FFD300;
+        border-color: #FFD300;
+    }
+
+        .payment-options-list:hover .visible-icon {
+            display: none;
+        }
+
+        .payment-options-list:hover .hover-icon {
+            display: inline;
+        }
+
+    .payment-options-list.dark:hover {
+        color: #FFFFFF;
+        background-color: #2F2F2F;
+        border-color: #2F2F2F;
+    }
+
+    .payment-options-list.text-center:hover {
+        background-color: inherit;
+        border-color: inherit;
+        color: inherit !important;
+    }
+
+.payment-method-container .set-primary-card {
+    margin-right: 8px;
+}
+
+.payment-method-container input[type='radio'] {
+    width: 13px;
+    height: 13px;
+}
+
+.payment-method-container .payment-options-list {
+    margin: 0px 32px 16px 32px;
+}
+
+.payment-method-container label.all-container {
+    margin-bottom: 2px;
+}
+
+.payment-options-container .payment-options-intro-container,
+.payment-options-container .add-new-card-container {
+    padding: 16px 24px;
+    margin: 0 24px;
+}
+
+.payment-options-container .payment-options-intro-container {
+    border-bottom: 1px solid #F1F3F8;
+}
+
+    .payment-options-container .payment-options-intro-container .payment-options-text span {
+        width: 32px;
+    }
+
+    .payment-options-container .payment-options-intro-container .paypal-icon {
+        height: 16px;
+        margin-right: 20px;
+    }
+
+    .payment-options-container .payment-options-intro-container .check {
+        display: none;
+    }
+
+.payment-options-container .close-wish {
+    padding: 16px;
+}
+
+.payment-options-container span.fa-angle-right {
+    padding: 3px;
+    float: right;
+}
+
+.payment-options-container .payment-options-main-text {
+    margin: 0px 24px 24px 24px;
+    padding: 0 24px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #80828B;
+}
+
+.payment-options-container .payment-ready-btn {
+    height: 24px;
+    margin: 16px;
+}
+
+.payment-options-container .payment-option-list {
+    margin: 10px 16px;
+    list-style-type: none;
+    box-shadow: 1px 4px 3px 1px #F3F3F3;
+}
+
+    .payment-options-container .payment-option-list .paypal-icon {
+        height: 16px;
+        margin-right: 20px;
+    }
+
+    .payment-options-container .payment-option-list li {
+        padding: 16px 16px 11px 32px;
+    }
+
+        .payment-options-container .payment-option-list li span {
+            width: 32px;
+        }
+/**================================Payment Options End===========================**/
+/**================================Addresses Start===============================**/
+.address-title {
+    padding: 30px 32px 0px 32px;
+    font-size: 30px;
+}
+
+    .address-title .sign-in-item {
+        padding: 8px 16px;
+    }
+
+        .address-title .sign-in-item.border-bottom-light-grey:hover {
+            cursor: pointer;
+        }
+
+.home-options-list {
+    padding: 16px 0px;
+    margin: 0px 32px;
+    font-weight: 300;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid #F1F3F8;
+}
+
+    .home-options-list:active,
+    .home-options-list:focus {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .home-options-list.disabled {
+        border-radius: 4px;
+        border: 1px solid #B7B7B7;
+    }
+
+    .home-options-list .icon {
+        margin-right: 16px;
+    }
+
+        .home-options-list .icon.float-right {
+            margin-top: 4px;
+        }
+
+        .home-options-list .icon.choose {
+            margin-right: 0px;
+        }
+
+        .home-options-list .icon.chosen {
+            margin-left: 4px;
+        }
+/**================================Addresses End=================================**/
+/**================================Sign Up Start=================================**/
+.have-an-account {
+    font-family: IRANSans, 'sans-serif';
+    /*font-family: 'Roboto Condensed', 'sans-serif';*/
+    font-weight: 500;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.verification-text {
+    /*font-family: 'Roboto Condensed';*/
+    font-family: IRANSans;
+    font-weight: 600;
+    text-align: center;
+    font-size: 30px;
+    margin: 24px 0px;
+}
+
+.sms-rate-text {
+    min-height: 84px;
+}
+
+.sign-up-form-container {
+    margin-top: 16px;
+}
+
+    .sign-up-form-container .add-new-address {
+        margin-top: 30px;
+        padding: 0 32px;
+    }
+
+        .sign-up-form-container .add-new-address .btn-dark {
+            height: 60px;
+        }
+
+    .sign-up-form-container .form {
+        padding: 16px 24px;
+    }
+
+    .sign-up-form-container .form-submit-button {
+        width: 100%;
+        padding: 20px 32px;
+    }
+
+        .sign-up-form-container .form-submit-button.small-padding {
+            padding: 10px 32px;
+        }
+
+        .sign-up-form-container .form-submit-button .btn-verify {
+            margin-top: 16px;
+        }
+
+        .sign-up-form-container .form-submit-button a {
+            width: 100%;
+        }
+
+            .sign-up-form-container .form-submit-button a span {
+                margin-left: 4px;
+            }
+
+        .sign-up-form-container .form-submit-button .verify-btn {
+            margin-top: 10px;
+        }
+
+    .sign-up-form-container .container-sms-rate-text {
+        margin-top: 8px;
+        margin-bottom: 24px;
+    }
+
+    .sign-up-form-container .sms-rate-text {
+        padding: 5px 48px;
+        font-size: 11px;
+        font-weight: 300;
+    }
+
+    .sign-up-form-container .fixed-bottom {
+        position: fixed;
+        bottom: 50px;
+        width: 100%;
+    }
+
+.intl-tel-input {
+    display: table-cell;
+    /*margin-left: 10px;*/
+    margin-right: 10px;
+}
+
+    .intl-tel-input .selected-flag {
+        z-index: 4;
+        outline: none;
+    }
+
+    .intl-tel-input.allow-dropdown .flag-container:hover .selected-flag {
+        background: transparent;
+    }
+
+    .intl-tel-input .country-list {
+        z-index: 5;
+    }
+
+.input-group .intl-tel-input .form-control {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+}
+
+.navigation-container {
+    border-bottom: 0;
+    box-shadow: 0px 2px 4px #02043312;
+}
+/**================================Sign Ups End==================================**/
+/**================================Settings Wrapper Start========================**/
+.settings-container {
+    padding: 0 32px;
+}
+
+.setting-wrapper,
+.setting-wrapper-1,
+.setting-wrapper-2,
+.setting-wrapper-primary {
+    line-height: 32px;
+    margin: 24px 0px;
+}
+
+    .setting-wrapper .switch,
+    .setting-wrapper-1 .switch,
+    .setting-wrapper-2 .switch,
+    .setting-wrapper-primary .switch {
+        margin-bottom: 0px;
+    }
+
+    .setting-wrapper:after,
+    .setting-wrapper-1:after,
+    .setting-wrapper-2:after,
+    .setting-wrapper-primary:after {
+        content: "";
+        display: block;
+        border-bottom: 1px solid #F1F3F8;
+        width: 48px;
+        margin-top: 16px;
+    }
+
+    .setting-wrapper-1:after {
+        width: 72px;
+    }
+
+    .setting-wrapper-2:after {
+        width: 96px;
+    }
+
+    .setting-wrapper-primary:after {
+        width: 120px;
+        border-color: #FCD300;
+    }
+
+.wrapper-active:after {
+    border-color: #FCD300;
+    transition: border-color 0.5s ease;
+}
+
+.wrapper-disabled:after {
+    border-color: #F1F3F8;
+    transition: border-color 0.5s ease;
+}
+/**================================Settings Wrapper End===========================**/
+/**================================Support Start==================================**/
+#support-team,
+#notifications {
+    overflow: scroll;
+}
+
+.change-request-status {
+    position: absolute;
+    top: 60px;
+    padding: 0 24px;
+    width: 100%;
+}
+
+    .change-request-status .switch {
+        margin-top: 8px;
+    }
+
+        .change-request-status .switch .slider {
+            background-color: #E4E4E4;
+            border: 2px solid #989898;
+        }
+
+    .change-request-status input:checked + .slider {
+        background-color: #FFD300;
+        border: 2px solid #FFD300;
+    }
+
+.all-support-team-messages {
+    margin: 8px 32px 16px 16px;
+}
+
+    .all-support-team-messages .support-team-message-container {
+        margin-top: 16px;
+    }
+
+        .all-support-team-messages .support-team-message-container .support-team-profile-picture span {
+            font-size: 8px;
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .all-support-team-messages .support-team-message-container .support-team-profile-picture img {
+            margin-left: 3px;
+            margin-top: -32px;
+        }
+
+        .all-support-team-messages .support-team-message-container .message-information {
+            width: 100%;
+            border-bottom: 1px solid #F1F3F8;
+        }
+
+            .all-support-team-messages .support-team-message-container .message-information .message-content {
+                margin-right: 16px;
+                margin-bottom: 16px;
+                width: 100%;
+                text-align: right;
+            }
+
+                .all-support-team-messages .support-team-message-container .message-information .message-content.dots {
+                    letter-spacing: 6px;
+                    font-weight: 900;
+                }
+
+                .all-support-team-messages .support-team-message-container .message-information .message-content .message-description {
+                    color: #95A0B6;
+                    font-weight: 300;
+                    /*font-family: 'Roboto';*/
+                    font-family: IRANSans;
+                    font-size: 14px;
+                    padding-left: 16px;
+                }
+
+                    .all-support-team-messages .support-team-message-container .message-information .message-content .message-description.cut {
+                        overflow: hidden;
+                        width: 100%;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                    }
+
+                .all-support-team-messages .support-team-message-container .message-information .message-content .message {
+                    font-weight: 300;
+                    font-style: italic;
+                    color: #0F73EE;
+                }
+
+            .all-support-team-messages .support-team-message-container .message-information .date {
+                min-width: 50px;
+                text-align: right;
+            }
+
+                .all-support-team-messages .support-team-message-container .message-information .date.date-read {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin-bottom: 16px;
+                    color: #95A0B6;
+                }
+
+                .all-support-team-messages .support-team-message-container .message-information .date .read-button a {
+                    background: #FFFFFF;
+                    width: 100%;
+                    display: block;
+                    border: 1px solid #268FF9;
+                    border-radius: 10px;
+                    font-size: 11px;
+                    color: #268FF9;
+                    text-align: center;
+                    padding: 2px 0px;
+                }
+
+                    .all-support-team-messages .support-team-message-container .message-information .date .read-button a:hover {
+                        background: #268FF9;
+                        color: #FFFFFF;
+                        transition: all ease-in 0.3s;
+                    }
+
+.support-description-text {
+    padding: 24px 0px;
+    margin: 0 32px;
+    border-bottom: 1px solid #F1F3F8;
+}
+/**================================Support End====================================**/
+/**========================History Items Container Start==========================**/
+.trip-history-driver-container {
+    margin-top: 16px;
+}
+
+    .trip-history-driver-container .balance-card-container {
+        box-shadow: 0px 10px 20px #0000001a;
+        padding: 32px 0px 8px 0px;
+    }
+
+    .trip-history-driver-container .search-history {
+        padding: 0px;
+        margin: 32px 0px;
+    }
+
+        .trip-history-driver-container .search-history .input-group .form-control {
+            padding: 0 16px;
+        }
+
+        .trip-history-driver-container .search-history .input-group .input-group-append {
+            margin: 8px 0px;
+            padding: 0 20px;
+            border-left: 1px solid #DEDEDE;
+        }
+
+            .trip-history-driver-container .search-history .input-group .input-group-append span {
+                color: #DEDEDE;
+                line-height: 0;
+                display: flex;
+                align-items: center;
+            }
+
+    .trip-history-driver-container .all-transaction-labels {
+        padding-bottom: 16px;
+    }
+
+    .trip-history-driver-container .all-sales-history-items {
+        box-shadow: 0px 10px 20px #0000001a;
+        padding: 0px 16px;
+    }
+
+        .trip-history-driver-container .all-sales-history-items .sales-history-item {
+            padding: 16px 0px;
+            border-bottom: 1px solid #D7DDE1;
+        }
+
+            .trip-history-driver-container .all-sales-history-items .sales-history-item .all-wide-container {
+                min-width: 60px;
+            }
+
+            .trip-history-driver-container .all-sales-history-items .sales-history-item .order-num-container {
+                margin-top: -8px;
+            }
+
+        .trip-history-driver-container .all-sales-history-items a:last-child .sales-history-item {
+            border-bottom: 0px;
+        }
+
+    .trip-history-driver-container .load-more {
+        margin: 32px 0px;
+    }
+
+.all-history-items .profile-picture {
+    z-index: 10;
+}
+
+.all-history-items .history-items-container {
+    padding: 0 16px;
+}
+
+    .all-history-items .history-items-container.trip-history {
+        padding: 24px;
+    }
+
+    .all-history-items .history-items-container.history-items-padding {
+        padding: 8px 16px;
+    }
+
+    .all-history-items .history-items-container .history-item {
+        box-shadow: 2px 2px 11px 0px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+        border-radius: 6px;
+    }
+
+        .all-history-items .history-items-container .history-item .request-info-container {
+            overflow: scroll;
+        }
+
+        .all-history-items .history-items-container .history-item .notification-container {
+            margin-top: 16px;
+            text-align: right
+        }
+
+            .all-history-items .history-items-container .history-item .notification-container p {
+                margin-bottom: 24px;
+                margin-top: 4px;
+            }
+
+        .all-history-items .history-items-container .history-item .trip-fare {
+            padding-bottom: 8px;
+        }
+
+        .all-history-items .history-items-container .history-item .all-trip-fares {
+            margin-top: 32px;
+        }
+
+            .all-history-items .history-items-container .history-item .all-trip-fares.trip-fare-request {
+                margin-top: 16px;
+            }
+
+        .all-history-items .history-items-container .history-item .trip-fare-container {
+            margin-top: 8px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #F1F3F8;
+        }
+
+            .all-history-items .history-items-container .history-item .trip-fare-container .trip-fare-item {
+                padding: 4px 0px;
+            }
+
+            .all-history-items .history-items-container .history-item .trip-fare-container.trip-fare-driver {
+                padding-bottom: 0;
+                border-bottom: 0px;
+            }
+
+        .all-history-items .history-items-container .history-item .driver-information {
+            margin: 24px 0px;
+        }
+
+            .all-history-items .history-items-container .history-item .driver-information .driver-name {
+                margin-left: 16px;
+            }
+
+        .all-history-items .history-items-container .history-item .driver-car-info .driver-car-info-item {
+            margin-top: 16px;
+        }
+
+            .all-history-items .history-items-container .history-item .driver-car-info .driver-car-info-item .info-container .info-container-label {
+                color: #7B7B7B;
+                font-weight: 300;
+            }
+
+        .all-history-items .history-items-container .history-item .status-container {
+            border-bottom: 1px solid #F1F3F8;
+            padding-bottom: 4px;
+            margin-top: 8px;
+        }
+
+            .all-history-items .history-items-container .history-item .status-container .calendar-icon {
+                height: 16px;
+                margin-top: -3px;
+                margin-right: 4px;
+            }
+
+            .all-history-items .history-items-container .history-item .status-container.status-container-driver {
+                margin-top: 16px;
+            }
+
+            .all-history-items .history-items-container .history-item .status-container .status {
+                color: red;
+            }
+
+        .all-history-items .history-items-container .history-item .href-decoration-none .map-input-container-bottom {
+            margin-left: 3px;
+        }
+
+        .all-history-items .history-items-container .history-item .href-decoration-none .map-input {
+            margin-left: 3px;
+        }
+
+        .all-history-items .history-items-container .history-item .online-support {
+            margin: 24px 0px;
+        }
+
+        .all-history-items .history-items-container .history-item .request-btn-container {
+            margin-top: 8px;
+            padding: 16px 0px;
+            border-top: 1px solid #F1F3F8;
+        }
+
+            .all-history-items .history-items-container .history-item .request-btn-container .request-btn {
+                height: 60px;
+                width: 48%;
+            }
+
+    .all-history-items .history-items-container .border-bottom-primary:after {
+        width: 32px;
+        margin-right: 0px;
+    }
+
+    .all-history-items .history-items-container .border-bottom-primary.width-48:after {
+        width: 48px;
+    }
+
+    .all-history-items .history-items-container .addresses-container {
+        padding: 0px;
+    }
+
+        .all-history-items .history-items-container .addresses-container #origin-input-container {
+            padding: 0px;
+        }
+
+        .all-history-items .history-items-container .addresses-container .map-input-container .map-input-icon {
+            margin: 0px 16px 0px 0px;
+        }
+
+.all-history-items.all-history-items-driver {
+    position: relative;
+}
+
+    .all-history-items.all-history-items-driver .history-item {
+        margin-top: -38px;
+        padding: 32px 16px;
+        background-color: #FFFFFF;
+    }
+
+.all-history-items .request-item-container:not(:first-child) {
+    margin-top: 32px;
+}
+/**========================History Items Container End============================**/
+/**========================Toggle Yes/No Check/Uncheck Settings Start=======**/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+}
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FFFFFF;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 20px;
+    border: 2px solid #E5E5E5;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 27px;
+        width: 27px;
+        left: 1px;
+        bottom: 1px;
+        background-color: #FFFFFF;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 50%;
+        box-shadow: 2px 2px 4px 1px #c5c5c5ad;
+    }
+
+input:checked + .slider {
+    background-color: #FFD300;
+    border: 2px solid #FFD300;
+}
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+        box-shadow: none;
+    }
+
+.slick-dots li button:before {
+    font-size: 30px;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+.controls {
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 50px;
+    outline: none;
+}
+
+.two-iframes {
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+}
+
+.one-iframe {
+    width: 99%;
+    height: 99%;
+    border: 0;
+}
+
+.first-layer {
+    border: 8px solid #ccc;
+    border-radius: 42px;
+}
+
+    .first-layer .second-layer {
+        border: 25px solid #2F2F2F;
+        border-radius: 33px;
+    }
+
+        .first-layer .second-layer .mobile-view {
+            border: 1px solid #495057;
+            border-radius: 30px;
+            width: 375px;
+            height: 812px;
+            margin: -11px;
+        }
+
+            .first-layer .second-layer .mobile-view iframe {
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                box-shadow: none;
+                border: 0;
+                transition: all 0ms ease;
+            }
+/**========================Toggle Yes/No Check/Uncheck Settings End==========**/
+/**===========================Start Requesting Ride Start====================**/
+.wish-container .wish-content-intro-container {
+    padding: 8px 24px 24px 24px;
+    margin: 0 24px;
+    border-bottom: 1px solid #F1F3F8;
+}
+
+.wish-container .close-wish {
+    padding: 8px 16px;
+}
+
+    .wish-container .close-wish img {
+        height: 10px;
+    }
+
+.wish-container span.fa-angle-right {
+    padding: 3px;
+    float: right;
+}
+
+.wish-container .wishes-main-text {
+    margin: 24px 24px 0px 24px;
+    padding: 0 24px;
+    font-size: 13px;
+    color: #80828B;
+}
+
+    .wish-container .wishes-main-text p:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+.wish-container .enter-wish {
+    margin: 0px 24px;
+    height: 59%;
+    border-top: 1px solid #f1f3f8;
+    padding-top: 16px;
+}
+
+    .wish-container .enter-wish textarea {
+        outline: none;
+        resize: none;
+        height: 100%;
+        border: none;
+    }
+
+.wish-container .send-wish-btn {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+    .wish-container .send-wish-btn .btn-primary {
+        width: 100%;
+        border-radius: 0;
+        height: 68px;
+        box-shadow: none;
+        color: black;
+        font-weight: 300;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+.text-info-margin {
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+.plus-icon {
+    margin-top: -2px;
+    height: 12px;
+    margin-left: 4px;
+}
+
+.ride-options-bottom .cars-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 24px 16px 10px 16px;
+    border-bottom: 1px solid #F1F3F8;
+    padding: 0 16px;
+}
+
+    .ride-options-bottom .cars-options .car-option {
+        padding: 0 16px 13px 16px;
+    }
+
+        .ride-options-bottom .cars-options .car-option.active {
+            padding-bottom: 8px;
+            border-bottom: 5px solid #FFD300;
+        }
+
+.ride-options-bottom .about-section-title {
+    color: #777777;
+    text-align: center;
+}
+
+    .ride-options-bottom .about-section-title strong,
+    .ride-options-bottom .about-section-title .black-text {
+        color: #000000;
+    }
+
+.ride-options-bottom .about-section-more {
+    margin: 2px 16px 0px 16px;
+    text-align: center;
+    color: #B1B1B1;
+    font-size: 13px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #F1F3F8;
+    margin-bottom: 8px;
+}
+
+.ride-options-bottom .payment-options {
+    display: flex;
+    border-right: 1px solid #F1F3F8;
+    color: #777777;
+    font-weight: 300;
+}
+
+    .ride-options-bottom .payment-options div.float-left,
+    .ride-options-bottom .payment-options div.float-right {
+        padding: 0 10px;
+    }
+
+    .ride-options-bottom .payment-options .default-payment-method-container,
+    .ride-options-bottom .payment-options .send-wishes-container {
+        width: 50%;
+        margin-bottom: 8px;
+    }
+
+        .ride-options-bottom .payment-options .default-payment-method-container:hover,
+        .ride-options-bottom .payment-options .send-wishes-container:hover {
+            cursor: pointer;
+        }
+
+        .ride-options-bottom .payment-options .default-payment-method-container .wishes,
+        .ride-options-bottom .payment-options .send-wishes-container .wishes {
+            padding: 0 16px !important;
+            height: 65%;
+            width: max-content;
+        }
+
+    .ride-options-bottom .payment-options .default-payment-method-container {
+        border-left: 1px solid #F1F3F8;
+        display: flex;
+        align-items: center;
+    }
+
+.ride-options-bottom .send-wishes-container {
+    display: flex;
+    align-items: center;
+}
+
+.ride-options-bottom .payment-options-more {
+    display: block;
+    color: #B1B1B1;
+    font-size: 12px;
+    word-break: break-word;
+}
+
+.tap-on-car {
+    position: absolute;
+    bottom: 0;
+    padding: 0 48px 48px 48px;
+    width: 100%;
+    text-align: center;
+}
+
+    .tap-on-car span {
+        color: red;
+        font-size: 32px;
+    }
+/**===========================Start Requesting Ride End======================**/
+/**============================Tapped Car Start==============================**/
+.tapped-car-info.more {
+    top: 250px;
+}
+
+.pending-icon {
+    margin-top: 0px;
+}
+
+.pending-icon,
+.approved-icon {
+    height: 49px;
+    line-height: 36px;
+    width: 49px;
+    background-color: #dddddd;
+    color: #FFFFFF;
+}
+
+    .pending-icon.call span,
+    .approved-icon.call span {
+        transform: rotate(90deg);
+        color: #FFFFFF;
+    }
+
+    .pending-icon:hover,
+    .approved-icon:hover,
+    .pending-icon:focus,
+    .approved-icon:focus {
+        outline: none;
+        color: white;
+        text-decoration: none;
+    }
+
+    .approved-icon.message {
+        background: #2F2F2F;
+        color: #FFFFFF;
+    }
+
+    .approved-icon.call {
+        background: #FFD300;
+    }
+
+        .approved-icon.call:focus {
+            background: #FFD300 !important;
+            border-color: #FFD300 !important;
+        }
+
+        .approved-icon.call span {
+            transform: rotate(90deg);
+            color: #FFFFFF;
+        }
+
+        .approved-icon.call.in-process {
+            background: #FF0000;
+        }
+
+            .approved-icon.call.in-process:focus {
+                background: #FF0000 !important;
+                border-color: #FF0000 !important;
+            }
+
+            .approved-icon.call.in-process span {
+                transform: rotate(227deg);
+            }
+
+.pending-icon {
+    margin-top: 0px;
+}
+
+.pending-icon,
+.approved-icon {
+    height: 49px;
+    line-height: 36px;
+    width: 49px;
+    background-color: #dddddd;
+    color: #FFFFFF;
+}
+
+    .pending-icon.call span,
+    .approved-icon.call span {
+        transform: rotate(90deg);
+        color: #FFFFFF;
+    }
+
+    .approved-icon.message {
+        background: #2F2F2F;
+        color: #FFFFFF;
+    }
+
+    .approved-icon.call {
+        background: #FFD300;
+    }
+
+        .approved-icon.call.in-process {
+            background: #FF0000;
+        }
+
+.tapped-car-info {
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
+    transition: 0.3s height;
+    overflow: hidden;
+    top: calc(100vh - 292px);
+}
+
+    .tapped-car-info.request {
+        top: auto;
+        overflow: visible;
+    }
+
+        .tapped-car-info.request .history-item {
+            background-color: #FFFFFF;
+        }
+
+        .tapped-car-info.request .border-bottom-primary:after {
+            margin-left: 0px;
+        }
+
+        .tapped-car-info.request .profile-information {
+            margin: 0 16px;
+            background-color: #FFFFFF;
+        }
+
+            .tapped-car-info.request .profile-information .profile-picture-img {
+                margin-top: -32px;
+            }
+
+        .tapped-car-info.request .request-btn-container {
+            margin: 16px 0px;
+            border-top: 1px solid #F1F3F8;
+        }
+
+            .tapped-car-info.request .request-btn-container .request-btn {
+                height: 60px;
+                width: 48%;
+            }
+
+        .tapped-car-info.request .map-input-container .map-input-icon {
+            margin: 0px 15px 0px 0px;
+        }
+
+        .tapped-car-info.request .trip-fare {
+            padding-bottom: 8px;
+        }
+
+    .tapped-car-info .tapped-car-container {
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        max-height: 100%;
+    }
+
+        .tapped-car-info .tapped-car-container .tapped-car-more-info {
+            padding: 8px 16px 0 24px;
+            margin: 0 16px;
+            background: #fff;
+            flex: 1;
+            display: flex;
+            flex-flow: column;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+            .tapped-car-info .tapped-car-container .tapped-car-more-info .more-info-container {
+                flex: 1;
+                height: 100%;
+                overflow: scroll;
+                margin: 16px 0px;
+                color: #757575;
+                font-weight: 300;
+                /*font-family: 'Roboto';*/
+                font-family: IRANSans;
+            }
+
+            .tapped-car-info .tapped-car-container .tapped-car-more-info .cancel-trip {
+                margin-top: 16px;
+                background: transparent;
+                height: 60px;
+                font-weight: 300;
+                border: 1px solid black;
+            }
+
+    .tapped-car-info .request-item-container .history-item {
+        padding: 32px 16px 16px 16px;
+    }
+
+        .tapped-car-info .request-item-container .history-item.driver-request {
+            height: 100%;
+            overflow: scroll;
+        }
+
+            .tapped-car-info .request-item-container .history-item.driver-request .driver-addresses-container .map-input-container-bottom,
+            .tapped-car-info .request-item-container .history-item.driver-request .driver-addresses-container .map-input {
+                margin-left: 2px;
+            }
+
+        .tapped-car-info .request-item-container .history-item .border-bottom-primary .status-container {
+            border-bottom: 1px solid #F1F3F8;
+        }
+
+    .tapped-car-info .request-item-container .all-trip-fares {
+        margin-top: 24px;
+    }
+
+    .tapped-car-info .tapped-car-info-container.more {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .tapped-car-info .tapped-car-info-container {
+        margin: 0 16px;
+        padding: 8px 16px 0 24px;
+        background: linear-gradient(to bottom, #FFD300 50%, #fff 50%);
+        height: 265px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+        .tapped-car-info .tapped-car-info-container .header-icons {
+            height: 24px;
+        }
+
+        .tapped-car-info .tapped-car-info-container .rider-info {
+            height: 45px;
+        }
+
+            .tapped-car-info .tapped-car-info-container .rider-info .profile-picture {
+                border: 2px solid rgba(112, 112, 112, 0.3);
+                border-radius: 50%;
+                padding: 2px;
+                margin-right: 24px;
+            }
+
+        .tapped-car-info .tapped-car-info-container .tapped-car-info-header-icons {
+            height: 24px;
+        }
+
+            .tapped-car-info .tapped-car-info-container .tapped-car-info-header-icons .slide-up,
+            .tapped-car-info .tapped-car-info-container .tapped-car-info-header-icons .slide-down {
+                width: 75%;
+                display: inline-block;
+            }
+
+        .tapped-car-info .tapped-car-info-container .ride-status {
+            margin-top: -20px;
+            flex-flow: column;
+            display: flex;
+            text-align: right;
+        }
+
+        .tapped-car-info .tapped-car-info-container .miles-till-arrival {
+            font-size: 24px;
+            display: block;
+            margin-top: -36px;
+            text-align: end;
+            font-weight: 400;
+            /*font-family: 'Bebas Neue', 'sans-serif';*/
+            font-family: IRANSans, 'sans-serif';
+        }
+
+    .tapped-car-info .request-btn .btn-transparent {
+        font-size: 15px;
+        text-transform: uppercase;
+        padding: 1px 24px;
+        border: 1px solid black;
+        background: none;
+        height: 100%;
+        box-shadow: 3px 4px 6px 0px #00000012;
+    }
+
+    .tapped-car-info .requested-car-info {
+        padding: 18px 0px 24px 0px;
+        border-bottom: 1px solid #F1F3F8;
+    }
+
+    .tapped-car-info.disabled .tapped-car-info-container {
+        background: linear-gradient(to bottom, #E4E4E4 50%, #fff 50%);
+    }
+
+    .tapped-car-info.disabled .tapped-car-more-info .cancel-trip {
+        display: none;
+    }
+/**============================Tapped Car End=================================**/
+/**============================Request Ride Start=============================**/
+.request-ride-info {
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
+}
+
+    .request-ride-info .drop-off-btn-container {
+        margin-bottom: 24px;
+    }
+
+    .request-ride-info .tapped-car-container {
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        max-height: 100%;
+    }
+
+        .request-ride-info .tapped-car-container .tapped-car-more-info {
+            padding: 8px 16px 0 24px;
+            margin: 0 16px;
+            background: #fff;
+            flex: 1;
+            display: flex;
+            flex-flow: column;
+        }
+
+            .request-ride-info .tapped-car-container .tapped-car-more-info .more-info-container {
+                flex: 1;
+                height: 100%;
+                overflow: scroll;
+                margin: 16px 0px;
+                color: #757575;
+                font-weight: 300;
+                /*font-family: 'Roboto';*/
+                font-family: IRANSans;
+            }
+
+            .request-ride-info .tapped-car-container .tapped-car-more-info .cancel-trip {
+                margin-top: 16px;
+                background: transparent;
+                height: 60px;
+                font-weight: 300;
+                border: 1px solid black;
+            }
+
+    .request-ride-info .tapped-car-info-container.more {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .request-ride-info .tapped-car-info-container {
+        margin: 0 16px;
+        padding: 8px 16px 0 24px;
+        background: #fff;
+        border-radius: 4px;
+        position: relative;
+    }
+
+        .request-ride-info .tapped-car-info-container .header-icons {
+            height: 24px;
+        }
+
+        .request-ride-info .tapped-car-info-container .rider-info {
+            height: 45px;
+        }
+
+            .request-ride-info .tapped-car-info-container .rider-info .profile-picture {
+                border: 2px solid rgba(112, 112, 112, 0.3);
+                border-radius: 50%;
+                padding: 2px;
+            }
+
+        .request-ride-info .tapped-car-info-container .tapped-car-info-header-icons {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            padding: 16px;
+        }
+
+            .request-ride-info .tapped-car-info-container .tapped-car-info-header-icons span {
+                position: absolute;
+                right: 0px;
+                width: 50px;
+                line-height: 50px;
+                height: 50px;
+                font-size: 27px;
+            }
+
+        .request-ride-info .tapped-car-info-container .ride-status {
+            margin-top: -20px;
+            flex-flow: column;
+            display: flex;
+            text-align: right;
+        }
+
+        .request-ride-info .tapped-car-info-container .miles-till-arrival {
+            font-size: 24px;
+            display: block;
+            margin-top: -36px;
+            text-align: end;
+            font-weight: 700;
+            /*font-family: 'Bebas Neue', 'sans-serif';*/
+            font-family: IRANSans, 'sans-serif';
+        }
+
+        .request-ride-info .tapped-car-info-container .pickup-btn-container {
+            display: flex;
+            margin-bottom: 24px;
+        }
+
+            .request-ride-info .tapped-car-info-container .pickup-btn-container .pickup-btn-item {
+                width: 49%;
+            }
+
+            .request-ride-info .tapped-car-info-container .pickup-btn-container .pickup-btn-other {
+                justify-content: space-between;
+                margin-left: 8px;
+                display: flex;
+                width: 50%;
+            }
+
+                .request-ride-info .tapped-car-info-container .pickup-btn-container .pickup-btn-other .pickup-btn-item {
+                    width: 49%;
+                }
+
+                    .request-ride-info .tapped-car-info-container .pickup-btn-container .pickup-btn-other .pickup-btn-item:last-child {
+                        margin-left: 8px;
+                    }
+
+                    .request-ride-info .tapped-car-info-container .pickup-btn-container .pickup-btn-other .pickup-btn-item button {
+                        width: 100%;
+                        border-radius: 4px;
+                        height: 60px;
+                        border: 0;
+                    }
+
+    .request-ride-info .profile-picture-img {
+        margin-top: -48px;
+    }
+
+    .request-ride-info .notification-container.addAddress {
+        margin-bottom: 24px;
+    }
+
+    .request-ride-info .addresses-container {
+        margin-bottom: 24px;
+    }
+
+        .request-ride-info .addresses-container .map-input-icon {
+            margin: 0px 15px 0px 0px;
+        }
+
+        .request-ride-info .addresses-container.border-bottom-primary:after {
+            width: 48px;
+        }
+
+        .request-ride-info .addresses-container.driver-addresses-container .map-input-container-bottom,
+        .request-ride-info .addresses-container.driver-addresses-container .map-input {
+            margin-left: 2px;
+        }
+
+    .request-ride-info .all-trip-fares .trip-fare-container {
+        margin-top: 8px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #F1F3F8;
+    }
+
+        .request-ride-info .all-trip-fares .trip-fare-container .trip-fare-item {
+            padding: 4px 0px;
+        }
+
+        .request-ride-info .all-trip-fares .trip-fare-container.trip-fare-driver {
+            padding-bottom: 0;
+            border-bottom: 0px;
+        }
+
+    .request-ride-info .border-bottom-primary:after {
+        content: "";
+        display: block;
+        width: 24px;
+        border: 2px solid #FCD300;
+        margin-top: 16px;
+        margin-left: 0px;
+    }
+
+    .request-ride-info .all-trip-fares {
+        margin-bottom: 24px;
+        border-bottom: 1px solid #F1F3F8;
+    }
+
+        .request-ride-info .all-trip-fares .border-bottom-primary:after {
+            margin-top: 4px;
+            width: 64px;
+        }
+
+        .request-ride-info .all-trip-fares .trip-fare-container {
+            padding: 16px 0px;
+            margin-bottom: 24px;
+            margin-top: 0px;
+        }
+
+.notification-request {
+    position: fixed;
+    width: 100%;
+    padding: 0px 16px;
+    top: 36px;
+    z-index: 1000;
+}
+
+.request-notification-container {
+    text-align: right;
+    padding: 16px 24px;
+    border-right: 4px solid #F50052;
+    box-shadow: 0px 3px 6px #00000029;
+    background: #FFFFFF;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+    .request-notification-container.map-notification {
+        background-color: hsla(0, 0%, 100%, 0.85);
+        margin-top: 16px;
+    }
+
+    .request-notification-container.map-notification-warning {
+        border-left: 4px solid #FFD300;
+    }
+
+    .request-notification-container .direction-icon {
+        height: 17px;
+    }
+/**============================Request Ride End===============================**/
+/**============================Review Start===================================**/
+.comment-info {
+    margin: 0 24px;
+}
+
+    .comment-info textarea {
+        height: 120px;
+        margin-top: 16px;
+        margin-bottom: 10px;
+        padding: 16px;
+        border: 1px solid #E3E3E3;
+        resize: none;
+    }
+
+        .comment-info textarea:focus {
+            outline: none;
+        }
+
+    .comment-info .comment-label {
+        color: #FFD300;
+    }
+
+    .comment-info .btn-primary {
+        height: 60px;
+        color: black;
+        font-weight: 300;
+        width: 100%;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+.comment-info-margin {
+    margin: 24px;
+    margin-bottom: 30px;
+}
+
+    .comment-info-margin .btn-primary {
+        line-height: 47px;
+    }
+
+.submit-review {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    border-radius: 10px;
+    bottom: 16px;
+    background-color: #FFFFFF;
+}
+
+    .submit-review .trip-desc-info {
+        margin: 0 24px;
+    }
+
+        .submit-review .trip-desc-info .trip-desc-question {
+            margin: 16px 0px 0px 0px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+    .submit-review .review-profile {
+        margin-top: -40px;
+        border: 2px solid rgba(112, 112, 112, 0.3);
+        border-radius: 50%;
+        padding: 2px;
+    }
+
+    .submit-review .please-rate {
+        padding: 16px;
+        margin-bottom: 16px;
+        font-weight: 300;
+        border-bottom: 1px solid #f1f1f3;
+        color: #757575;
+    }
+
+    .submit-review .driver-stars {
+        margin-bottom: 16px;
+    }
+
+    .submit-review .driver-info {
+        height: 120px;
+        background-color: #FCD300;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+        .submit-review .driver-info .driver-picture {
+            margin-top: -37px;
+            border-radius: 50%;
+            border: 2px solid rgba(112, 112, 112, 0.3);
+            padding: 2px;
+            margin-bottom: 8px;
+        }
+
+        .submit-review .driver-info .close-review {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+        }
+
+    .submit-review .btn-primary {
+        height: 60px;
+        width: 100%;
+        font-size: 18px;
+        margin-bottom: 32px;
+    }
+/**============================Review End=====================================**/
+/**============================Promo Start====================================**/
+.promocode-container .form-group .input-group {
+    border: none;
+    border-bottom: 1px solid #B7B7B7;
+    border-radius: 0;
+    margin-bottom: 16px;
+}
+
+.promocode-container .activate-btn {
+    padding: 0px 32px 32px 32px;
+}
+/**============================Promo End======================================**/
+/**============================Chat Start=====================================**/
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 8px 32px 0px 32px;
+    height: calc(100% - 72px);
+    overflow: scroll;
+}
+
+    .chat-container .calendar-icon {
+        height: 13px;
+        margin-top: -3px;
+    }
+
+    .chat-container .left-align-message,
+    .chat-container .right-align-message {
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 16px 0px 32px 0px;
+    }
+
+        .chat-container .left-align-message .message-info,
+        .chat-container .right-align-message .message-info {
+            flex-flow: column;
+            display: flex;
+            font-weight: 300;
+            color: #AAAAAA;
+            /*font-family: 'Roboto Condensed';*/
+            font-family: IRANSans;
+            font-size: 11px;
+            text-align: right;
+            min-width: 70px;
+        }
+
+            .chat-container .left-align-message .message-info .icon,
+            .chat-container .right-align-message .message-info .icon {
+                margin-right: 8px;
+            }
+
+                .chat-container .left-align-message .message-info .icon img,
+                .chat-container .right-align-message .message-info .icon img {
+                    height: 10px;
+                }
+
+            .chat-container .left-align-message .message-info .fas,
+            .chat-container .right-align-message .message-info .fas {
+                font-weight: 300;
+                margin-right: 10px;
+                font-size: 10px;
+            }
+
+        .chat-container .left-align-message .message-content,
+        .chat-container .right-align-message .message-content {
+            padding: 8px 24px;
+            border-radius: 6px;
+            margin: 0 8px;
+            background: #EFEFF4;
+            font-weight: 300;
+            font-size: 15px;
+            font-family: 'SF Pro Regular';
+            font-family: IRANSans;
+        }
+
+            .chat-container .left-align-message .message-content.dots,
+            .chat-container .right-align-message .message-content.dots {
+                letter-spacing: 6px;
+                font-weight: 900;
+            }
+
+        .chat-container .left-align-message .profile-picture,
+        .chat-container .right-align-message .profile-picture {
+            margin-bottom: -16px;
+            min-width: 45px;
+        }
+
+            .chat-container .left-align-message .profile-picture .status,
+            .chat-container .right-align-message .profile-picture .status {
+                vertical-align: bottom;
+                color: #00A457;
+                margin-right: -3px;
+                font-size: 9px;
+            }
+
+            .chat-container .left-align-message .profile-picture .profile-picture-image,
+            .chat-container .right-align-message .profile-picture .profile-picture-image {
+                height: 32px;
+            }
+
+        .chat-container .left-align-message .message-content {
+            border-bottom-right-radius: 0px;
+        }
+
+            .chat-container .left-align-message .message-content.dots {
+                letter-spacing: 6px;
+                font-weight: 900;
+            }
+
+    .chat-container .right-align-message {
+        flex-flow: row-reverse;
+    }
+
+        .chat-container .right-align-message .message-content {
+            border-bottom-left-radius: 0px;
+            background-color: #FFD300;
+        }
+
+            .chat-container .right-align-message .message-content.dots {
+                letter-spacing: 6px;
+                font-weight: 900;
+            }
+
+        .chat-container .right-align-message .message-info {
+            text-align: left;
+        }
+
+.send-message {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+    .send-message .send-message-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+        width: 100%;
+        border-top: 1px solid #F1F3F8;
+        color: #C7C7C7;
+    }
+
+        .send-message .send-message-container .message-input {
+            height: 40px;
+            line-height: 40px;
+            width: 60%;
+            border: 1px solid #F1F3F8;
+            outline: none;
+            padding: 0 10px;
+            font-weight: 300;
+        }
+/**============================Chat End=======================================**/
+/**============================Google Maps Classes Start======================**/
+.location-icon-rotate {
+    transform: rotate(136deg);
+}
+
+#origin-input-container {
+    padding: 0 16px;
+    width: 100%;
+    left: 0px !important;
+}
+
+.map-input-container-top {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.map-input-container-bottom {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#origin-input,
+#destination-input {
+    background-color: #fff;
+    /*font-family: 'Roboto Condensed';*/
+    font-family: IRANSans;
+    font-size: 15px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding-right: 8px;
+}
+
+#searchingModal .search {
+    width: auto;
+    margin: 0 auto;
+    padding: 24px 8px;
+}
+
+    #searchingModal .search .fa-spinner {
+        color: #FFD300;
+        margin-bottom: 12px;
+        font-size: 24px;
+    }
+
+.map-input-container .map-input {
+    width: 100%;
+    margin-right: 16px;
+}
+
+    .map-input-container .map-input span {
+        line-height: 50px;
+        font-size: 18px;
+    }
+
+    .map-input-container .map-input .mic {
+        margin-right: 8px;
+        color: #E4E4E4;
+    }
+
+    .map-input-container .map-input .remove {
+        color: #707070;
+    }
+
+        .map-input-container .map-input .remove img {
+            height: 14px;
+            margin-left: 4px;
+        }
+
+.map-input-container:first-child .map-input {
+    border-bottom: 1px solid #F1F3F8;
+}
+
+.hdpi.pac-logo:after {
+    display: none;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.col-xs-12,
+.col-sm-12 {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.pac-container {
+    height: 100%;
+    width: 100% !important;
+    left: 0px !important;
+    padding: 0px 28px;
+    border-top: none;
+    /*font-family: 'Roboto Condensed';*/
+    font-family: IRANSans;
+    top: 163px !important;
+    font-size: 20px !important;
+    box-shadow: none;
+}
+
+    .pac-container .pac-icon {
+        margin-right: 16px;
+    }
+
+    .pac-container .pac-item-query,
+    .pac-container .pac-matched {
+        font-weight: 300 !important;
+    }
+
+    .pac-container .pac-item {
+        padding: 8px 0;
+        border-top: none;
+    }
+
+#map > div {
+    background-color: #FFFFFF !important;
+}
+
+#map1,
+#map2,
+#map3 {
+    height: 120px;
+}
+
+a[href^="http://maps.google.com/maps"] {
+    display: none !important;
+}
+
+a[href^="https://maps.google.com/maps"] {
+    display: none !important;
+}
+
+.gmnoprint a,
+.gmnoprint span,
+.gm-style-cc {
+    display: none;
+}
+
+.gmnoprint div {
+    background: none !important;
+}
+
+.gm-bundled-control.gm-bundled-control-on-bottom {
+    display: none;
+}
+
+.map-input-container {
+    background-color: #FFFFFF;
+    display: flex;
+}
+
+    .map-input-container .map-input-icon {
+        color: #4A4F64;
+        background-color: #FFFFFF;
+        margin: 0 15px;
+        line-height: 50px;
+    }
+
+    .map-input-container input {
+        flex: 1;
+        background-color: #FFFFFF;
+    }
+
+        .map-input-container input:focus {
+            border: none;
+        }
+/**============================Google Maps Classes End======================**/
+/**============================Buttons Start===================================**/
+.btn-dark {
+    width: 100%;
+    border-radius: 4px;
+    height: 60px;
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 47px;
+    text-transform: uppercase;
+}
+
+    .btn-dark .question-icon {
+        margin-left: 16px;
+    }
+
+    .btn-dark.shadow {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16) !important;
+    }
+
+    .btn-dark:hover {
+        background-color: #000000;
+    }
+
+.button-padding {
+    width: 50%;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.request-ride-btn,
+.go-to-pickup-btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 25px;
+    padding: 0 16px;
+}
+
+    .request-ride-btn button,
+    .go-to-pickup-btn button {
+        width: 100%;
+        color: black;
+        height: 60px;
+        font-weight: 300;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+.confirm-ride-btn {
+    width: 100%;
+}
+
+    .confirm-ride-btn button {
+        width: 100%;
+        color: black;
+        height: 60px;
+        font-weight: 300;
+        font-size: 18px;
+        border-radius: 0;
+        text-transform: uppercase;
+        box-shadow: none;
+    }
+
+.finish-ride-btn-container {
+    margin-bottom: 24px;
+}
+
+    .finish-ride-btn-container .btn-finish {
+        background-color: #1308FE;
+        color: #FFFFFF;
+        font-size: 18px;
+        height: 60px;
+        line-height: 47px;
+        border-radius: 4px;
+    }
+
+.btn-primary {
+    background-color: #FFD300;
+    border: 1px solid #FFD300;
+    font-weight: 400;
+    box-shadow: 3px 4px 6px 0px #00000024;
+    height: 60px;
+    color: black;
+    line-height: 47px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active {
+        background-color: #2F2F2F !important;
+        color: #FFFFFF !important;
+    }
+
+.btn-transparent,
+.btn-transparent-primary {
+    width: 100%;
+    height: 60px;
+    font-weight: 300;
+    line-height: 43px;
+    border: 1px solid #2c2c2c;
+    border-radius: 4px;
+    font-size: 18px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+    .btn-transparent:hover,
+    .btn-transparent-primary:hover,
+    .btn-transparent:focus,
+    .btn-transparent-primary:focus,
+    .btn-transparent:active,
+    .btn-transparent-primary:active {
+        background-color: #2c2c2c !important;
+        color: #FFFFFF !important;
+    }
+
+.btn-transparent-primary {
+    color: #000000 !important;
+}
+
+    .btn-transparent-primary:hover {
+        background-color: #FFD300 !important;
+        border-color: #FFD300;
+    }
+
+.btn-secondary {
+    background-color: #3B5998;
+    color: #FFFFFF !important;
+    border: 1px solid #3B5998;
+    font-weight: 300;
+    box-shadow: 3px 4px 6px 0px #00000024;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+    .btn-secondary:hover {
+        background-color: #092869;
+        color: #FFFFFF;
+        border: 1px solid #3B5998;
+    }
+
+.btn-default {
+    background-color: #2F2F2F;
+    color: #FFFFFF;
+}
+
+.btn-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-padding-1 {
+    padding: 18px;
+}
+
+.sign-up-btn-container {
+    margin: 30px;
+    margin-bottom: 16px;
+}
+
+a:hover,
+button:hover,
+.delete-btn:hover,
+.upload-btn:hover,
+.btn-dark:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.slide-up:hover,
+.slide-down:hover {
+    cursor: pointer;
+}
+/**============================Buttons End=====================================**/
+/**============================Display Start=================================**/
+.display-flex {
+    display: flex !important;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.hidden-soft {
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+.flex-end {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+/**============================Display End===================================**/
+/**============================Colors Start==================================**/
+.blue-price {
+    color: #1308FE;
+}
+
+.blue-icon {
+    color: #3389FF;
+}
+
+.main-background {
+    background-color: #FFD300;
+}
+
+.light-gray {
+    color: #B1B1B1;
+}
+
+.gray {
+    color: #777777;
+}
+
+.green-status {
+    color: #00D310 !important;
+}
+
+.primary-color {
+    color: #FFD300 !important;
+}
+
+.primary-background {
+    background: #FFD300;
+}
+
+.grey-label {
+    color: #707070;
+}
+
+.pink {
+    color: #F50052;
+}
+/**============================Colors End====================================**/
+/**====================Margin/Padding Start==================================**/
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.margin-right-15 {
+    margin-right: 15px;
+}
+
+.margin-top-auto {
+    margin-top: auto;
+}
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-top-25 {
+    margin-top: 25px;
+}
+
+.margin-bottom-up {
+    margin-top: -50px;
+}
+
+.loading-logo-margin {
+    margin-top: -65px;
+}
+/**====================Margin/Padding End====================================**/
+/**====================Container Start=======================================**/
+.all-container {
+    padding: 0 32px;
+}
+
+.all-wide-container {
+    padding: 0 16px;
+}
+
+.all-container-with-classes .form-group {
+    padding: 4px 0px;
+}
+
+.all-container-with-classes .form-submit-button {
+    margin: 30px 0px;
+}
+
+.all-container-with-classes .form-control-margin {
+    margin: 30px 0px;
+}
+
+.form-control-with-padding {
+    padding: 0 24px !important;
+}
+
+.graph-container {
+    margin-top: 32px;
+    padding: 0 16px;
+}
+
+.small-balance-container {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .small-balance-container .balance-card-container-small {
+        box-shadow: 0px 10px 20px #0000001a;
+        padding: 16px;
+        margin: 16px;
+        margin-bottom: 24px;
+        border-radius: 8px;
+    }
+
+        .small-balance-container .balance-card-container-small #canvas1,
+        .small-balance-container .balance-card-container-small #canvas2 {
+            height: 165px;
+        }
+
+        .small-balance-container .balance-card-container-small.slick-slide {
+            margin-right: 8px;
+        }
+
+        .small-balance-container .balance-card-container-small:focus {
+            outline: none;
+        }
+/**====================Container End=========================================**/
+/**===========================Link Start=====================================**/
+.regular-link {
+    color: #B1B1B1;
+}
+
+    .regular-link:hover {
+        color: #777777;
+        text-decoration: none;
+    }
+
+.dark-link {
+    color: #2F2F2F;
+}
+
+    .dark-link:hover {
+        color: #777777;
+        text-decoration: none;
+    }
+
+.href-decoration-none {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+    .href-decoration-none:focus,
+    .href-decoration-none:active,
+    .href-decoration-none:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
+.no-hover {
+    background-color: inherit;
+}
+/**===========================Link End=======================================**/
+/**===========================General Styles Start===========================**/
+.driver-text-logo {
+    /*font-family: 'Bebas Neue', 'sans-serif';*/
+    font-family: IRANSans, 'sans-serif';
+    font-size: 50px;
+    color: #FCD300;
+    text-shadow: 0px 3px 5px #00000031;
+}
+
+.file-prompt {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    left: 0;
+}
+
+.pulse {
+    display: block;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 17px;
+    box-shadow: 0 0 0 rgba(252, 211, 0, 0.4);
+    animation: pulse 2s infinite;
+    opacity: 1 !important;
+}
+
+    .pulse.current-location {
+        margin-left: 5px;
+        margin-top: 6px;
+        border-radius: 27%;
+        padding: 0px;
+    }
+
+    .pulse:hover {
+        animation: none;
+    }
+
+.verify-text {
+    margin-bottom: 16px;
+}
+
+.fas.fa-star {
+    color: #FFD300;
+}
+
+    .fas.fa-star:hover {
+        cursor: pointer;
+    }
+
+.label-title {
+    color: #848484;
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 2px;
+}
+
+    .label-title.light {
+        color: #AAB2B7;
+    }
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+.overflow-scroll-y {
+    overflow-y: scroll;
+}
+/**===========================General Styles End=============================**/
+/**==============================Border Start================================**/
+.border-bottom {
+    border: none;
+    border-bottom: 1px solid #000000 !important;
+}
+
+.border-radius-4 {
+    border-radius: 4px;
+}
+
+.border-bottom-primary:after {
+    content: "";
+    display: block;
+    width: 48px;
+    margin-right: 32px;
+    border: 2px solid #FCD300;
+    margin-top: -4px;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.border-bottom-primary.thin:after {
+    border: 1px solid #FCD300;
+    margin-top: -2px;
+}
+
+.border-bottom-primary:hover:after {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.dotted-line {
+    height: 35px;
+    position: absolute;
+    width: 1px;
+    border: 1px dashed #FFFFFF;
+    z-index: 100;
+    margin-top: -14px;
+    margin-left: 4px;
+    background: linear-gradient(to right, #707070 50%, #707070 0%), linear-gradient(#707070 50%, #707070 0%), linear-gradient(to right, #707070 50%, rgba(112, 112, 112, 0) 0%), linear-gradient(#707070 50%, rgba(112, 112, 112, 0) 0%);
+    background-repeat: repeat-x, repeat-y;
+    background-size: 1px 0px, 1px 1px;
+}
+
+.dotted-line-index {
+    height: 38px;
+    position: absolute;
+    width: 1px;
+    border: 1px dashed #FFFFFF;
+    z-index: 100;
+    margin-top: -17px;
+    margin-left: 19px;
+    background: linear-gradient(to right, #707070 50%, #707070 0%), linear-gradient(#707070 50%, #707070 0%), linear-gradient(to right, #707070 50%, rgba(112, 112, 112, 0) 0%), linear-gradient(#707070 50%, rgba(112, 112, 112, 0) 0%);
+    background-repeat: repeat-x, repeat-y;
+    background-size: 1px 0px, 1px 1px;
+}
+
+.border-bottom-primary-100 {
+    border-bottom: 1px solid #FCD300;
+}
+
+.border-bottom-light-grey {
+    border-bottom: 1px solid #F1F3F8;
+}
+
+.box-shadow-0 {
+    box-shadow: none !important;
+}
+/**==============================Border End===================================**/
+/**============================Font Sizes Start===============================**/
+.font-10 {
+    font-size: 10px;
+}
+
+.font-11 {
+    font-size: 11px;
+}
+
+.font-13 {
+    font-size: 13px;
+}
+
+.font-15 {
+    font-size: 15px;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-22 {
+    font-size: 22px;
+}
+
+.font-28 {
+    font-size: 28px;
+}
+
+.font-30 {
+    font-size: 30px;
+}
+/**============================Font Sizes Start================================**/
+/**============================Width/Height Start==============================**/
+.width-100 {
+    width: 100%;
+}
+
+.remaining-height {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    max-height: 100%;
+}
+
+.height-auto {
+    height: auto;
+}
+
+.height-80 {
+    height: 80%;
+}
+
+.height-100 {
+    height: 100%;
+}
+/**============================Width/Height End=================================**/
+/**============================Animations Start===================================**/
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(252, 211, 0, 0.7);
+    }
+
+    70% {
+        -webkit-box-shadow: 0 0 0 46px rgba(252, 211, 0, 0.3);
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(252, 211, 0, 0.3);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(252, 211, 0, 0.7);
+        box-shadow: 0 0 0 0 rgba(252, 211, 0, 0.7);
+    }
+
+    70% {
+        -moz-box-shadow: 0 0 0 46px rgba(252, 211, 0, 0.3);
+        box-shadow: 0 0 0 46px rgba(252, 211, 0, 0);
+    }
+
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(252, 211, 0, 0.3);
+        box-shadow: 0 0 0 0 rgba(252, 211, 0, 0);
+    }
+}
+
+@-webkit-keyframes slide_up_ride {
+    0% {
+        top: auto;
+    }
+
+    25% {
+        top: 250px;
+    }
+}
+
+@keyframes slide_up_ride {
+    0% {
+        top: auto;
+    }
+
+    25% {
+        top: 250px;
+    }
+}
+/**============================Animations End=====================================**/
+@media all and (orientation: landscape) and (max-height: 616px) {
+    .slide-up {
+        display: none !important;
+    }
+}
+
+@media all and (max-height: 712px) {
+    .tapped-car-info.request .addresses-container,
+    .tapped-car-info.request .all-trip-fares,
+    .request-ride-info .addresses-container,
+    .request-ride-info .notification-container {
+        display: none !important;
+    }
+}
+/*# sourceMappingURL=styles.css.map */

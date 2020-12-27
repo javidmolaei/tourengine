@@ -6,9 +6,11 @@ import ir.company.tourengine.model.request.AuthenticationRequest;
 import ir.company.tourengine.model.response.StandardResponse;
 import ir.company.tourengine.model.response.AuthenticationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -92,5 +94,9 @@ public class LoginController {
             return ServerException.create("خطای ناشناخته", e);
 
         }
+    }
+    @GetMapping("/register")
+    public ModelAndView register() {
+        return new ModelAndView("sign-up-page-1");
     }
 }

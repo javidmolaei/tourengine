@@ -1,5 +1,6 @@
 package ir.company.tourengine.controller;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
  public class BaseController  {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView visitHome() {
+        System.out.println(new BCryptPasswordEncoder().encode("123456"));
         return new ModelAndView("index");
     }
 
@@ -23,10 +25,12 @@ import org.springframework.web.servlet.ModelAndView;
         model.addObject("setting2", "Enable/Disable  Service");
         model.addObject("setting3", "Show/Create");
 
+
+
         return model;
     }
 
-    @RequestMapping(value = "/enter", method = RequestMethod.GET)
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public ModelAndView login(@RequestParam(value = "error", required = false) String error,
                               @RequestParam(value = "logout", required = false) String logout) {
 
@@ -56,5 +60,16 @@ import org.springframework.web.servlet.ModelAndView;
 
     }
 
+    @RequestMapping(value = "/about", method = RequestMethod.GET)
+    public ModelAndView about() {
+
+        ModelAndView model = new ModelAndView();
+
+        model.addObject("about", "Invalid username and password!");
+        model.setViewName("about");
+
+        return model;
+
+    }
 
 }

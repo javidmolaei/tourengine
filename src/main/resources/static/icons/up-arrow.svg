@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37.475" height="13.534" viewBox="0 0 37.475 13.534">
+  <g id="up_gray_arrow" data-name="up gray arrow" transform="translate(-168.712 270.268)">
+    <line id="left_arrow" data-name="left arrow" y1="6" x2="15" transform="matrix(1, 0.017, -0.017, 1, 172.453, -266.63)" fill="none" stroke="#f5f5f5" stroke-linecap="round" stroke-width="5.5"/>
+    <line id="right_arrow" data-name="right arrow" x1="15" y1="6" transform="matrix(1, -0.017, 0.017, 1, 187.449, -266.369)" fill="none" stroke="#f5f5f5" stroke-linecap="round" stroke-width="5.5"/>
+  </g>
+</svg>

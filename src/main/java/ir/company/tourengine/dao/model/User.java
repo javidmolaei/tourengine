@@ -2,6 +2,7 @@ package ir.company.tourengine.dao.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import ir.company.tourengine.enums.Roles;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
@@ -35,11 +36,20 @@ public class User {
     @JsonBackReference
     private List<FalloutFactor> falloutFactors;
 
+    @Type(type = "true_false")
+//    @NotNull(message = "NOT_NULL")
+    @Column(name = "enabled", nullable = false)
+    private boolean enable = true;
 
     @ManyToOne
     @JoinColumn(name = "fk_passenger", referencedColumnName = "ID")
     @JsonManagedReference
     private Passenger passenger;
+
+    @ElementCollection(targetClass = Roles.class)
+    @CollectionTable(name = "authorities" , joinColumns = @JoinColumn(name = "MOBILE" , referencedColumnName = "MOBILE"))
+    @Enumerated(EnumType.STRING)
+    private List<Roles> roles;
 
     public List<FalloutFactor> getFalloutFactors() {
         return falloutFactors;
@@ -159,5 +169,13 @@ public class User {
 
     public void setvCode(String vCode) {
         this.vCode = vCode;
+    }
+
+    public boolean isEnable() {
+        return enable;
+    }
+
+    public void setEnable(boolean enable) {
+        this.enable = enable;
     }
 }

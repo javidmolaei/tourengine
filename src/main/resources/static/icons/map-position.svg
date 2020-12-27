@@ -1,0 +1,6 @@
+<svg id="Stockholm-icons-_-Map-_-Position" data-name="Stockholm-icons-/-Map-/-Position" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <rect id="bound" width="48" height="48" fill="none"/>
+  <path id="Oval" d="M38,22h4a2,2,0,0,1,0,4H38a2,2,0,0,1,0-4ZM6,22h4a2,2,0,0,1,0,4H6a2,2,0,0,1,0-4ZM24,4a2,2,0,0,1,2,2v4a2,2,0,0,1-4,0V6A2,2,0,0,1,24,4Zm0,32a2,2,0,0,1,2,2v4a2,2,0,0,1-4,0V38A2,2,0,0,1,24,36Z" opacity="0.3"/>
+  <circle id="Path" cx="4" cy="4" r="4" transform="translate(20 20)" opacity="0.3"/>
+  <path id="Oval-70" d="M24,34A10,10,0,1,0,14,24,10,10,0,0,0,24,34Zm0,4A14,14,0,1,1,38,24,14,14,0,0,1,24,38Z"/>
+</svg>
